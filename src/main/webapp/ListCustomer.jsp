@@ -1,5 +1,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="com.example.jsp_bt_listcustomer.Customer" %>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: My PC
@@ -10,7 +11,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-
 <head>
     <title>Hi</title>
 </head>
@@ -23,14 +23,15 @@
     request.setAttribute("ds", customerList);
 %>
 <body>
-<table border="1" cellpadding="1">
+<table class="table">
+
 <tr>
-    <td>name</td>
-    <td>birthDate</td>
-    <td>address</td>
+    <th class="table-primary">Name</th>
+    <th class="table-danger">Birth Date</th>
+    <th class="table-info">Address</th>
 </tr>
     <c:forEach var="cus" items="${ds}">
-        <tr>
+        <tr >
             <td>${cus.name}</td>
             <td>${cus.birthDate}</td>
             <td>${cus.address}</td>
